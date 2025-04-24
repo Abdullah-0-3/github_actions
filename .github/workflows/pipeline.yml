@@ -13,4 +13,14 @@ jobs:
     steps:
       - name: Print
         run: echo "Hello, World!"
-        
+
+  check-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Print README.md
+        run: cat README.md
