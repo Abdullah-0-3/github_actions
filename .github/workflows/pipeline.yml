@@ -24,3 +24,14 @@ jobs:
 
       - name: Print README.md
         run: cat README.md
+
+  build-docker-image:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Code Checkout
+        uses: actions/checkout@v4
+        
+      - name: Build Docker Image
+        run: docker build -t flask-app .
