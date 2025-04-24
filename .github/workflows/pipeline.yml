@@ -1,0 +1,16 @@
+name: Simple GitHub Actions Workflow
+
+on:
+  push: 
+    branches:
+      - main
+
+jobs:
+
+  print-hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print
+        run: echo "Hello, World!"
+        
